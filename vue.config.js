@@ -8,20 +8,20 @@ function resolve(dir) {
 
 const name = defaultSettings.title || 'vue Admin Template' // page title
 
-// If your port is set to 80,
-// use administrator privileges to execute the command line.
-// For example, Mac: sudo npm run
-// You can change the port by the following methods:
-// port = 9528 npm run dev OR npm run dev --port = 9528
+// 如果端口设置为80，
+// 使用管理员权限执行命令行。
+// 例如，Mac:sudo npm run
+// 您可以通过以下方法更改端口：
+// 端口=9528 npm运行开发或npm运行开发--端口=9528
 const port = process.env.port || process.env.npm_config_port || 9528 // dev port
 
-// All configuration item explanations can be find in https://cli.vuejs.org/config/
+//所有配置项说明都可以在中找到 https://cli.vuejs.org/config/
 module.exports = {
   /**
-   * You will need to set publicPath if you plan to deploy your site under a sub path,
-   * for example GitHub Pages. If you plan to deploy your site to https://foo.github.io/bar/,
-   * then publicPath should be set to "/bar/".
-   * In most cases please use '/' !!!
+   * 如果计划在子路径下部署站点，则需要设置publicPath，
+   * 例如GitHub页面。如果您计划将站点部署到https://foo.github.io/bar网站/,
+   * 那么publicPath应该设置为“/bar/”。
+   * 在大多数情况下，请使用“/”！！！
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
   publicPath: '/',
@@ -31,7 +31,7 @@ module.exports = {
   productionSourceMap: false,
   devServer: {
     port: port,
-    open: true,
+    open: false,
     overlay: {
       warnings: false,
       errors: true
@@ -39,8 +39,8 @@ module.exports = {
     before: require('./mock/mock-server.js')
   },
   configureWebpack: {
-    // provide the app's title in webpack's name field, so that
-    // it can be accessed in index.html to inject the correct title.
+    // 在webpack的name字段中提供应用程序的标题，
+    // 以便它可以在index.html索引插入正确的标题。
     name: name,
     resolve: {
       alias: {

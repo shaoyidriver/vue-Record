@@ -51,6 +51,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  /*@import "~bootstrap/dist/css/bootstrap.css";*/
   @import "~@/styles/mixin.scss";
   @import "~@/styles/variables.scss";
 
